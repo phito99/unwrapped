@@ -19,14 +19,14 @@ class RestWrapper:
             return json_response.json()
         raise Exception(json_response.json()["message"])
 
-    def get(self):
+    def get(self) -> Response:
         return self._send_request(method='GET')
 
-    def post(self):
+    def post(self) -> Response:
         return self._send_request(method='POST')
 
-    def put(self):
+    def put(self) -> Response:
         return self._send_request(method='PUT')
 
-    def delete(self):
+    def delete(self) -> Response:
         return self._send_request(method='DELETE')
